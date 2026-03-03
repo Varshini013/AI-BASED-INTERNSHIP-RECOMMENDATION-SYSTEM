@@ -1,11 +1,12 @@
 import os
 from pathlib import Path
+from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-pm-internship-scheme-portal-secret-key-2024'
+SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,5 +77,5 @@ AUTH_USER_MODEL = 'student_portal.CustomUser'
 
 LOGIN_URL = '/student/login/'
 
-GROQ_API_KEY = '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'          # from console.groq.com (FREE)
+GROQ_API_KEY = config('GROQ_API_KEY')          # from console.groq.com (FREE)
 GROQ_MODEL   = 'llama-3.1-8b-instant'
