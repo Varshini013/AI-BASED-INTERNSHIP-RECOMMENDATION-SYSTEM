@@ -4,3 +4,12 @@ python-decouple
 whitenoise
 dj-database-url
 psycopg2-binary
+requests
+numpy
+pandas
+scikit-learn
+joblib
+scipy
+pdfplumber
+nltk
+PyMuPDF
